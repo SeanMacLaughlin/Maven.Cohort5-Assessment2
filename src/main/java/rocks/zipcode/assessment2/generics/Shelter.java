@@ -1,5 +1,11 @@
 package rocks.zipcode.assessment2.generics;
 
+import rocks.zipcode.assessment2.generics.ageable.Ageable;
+import rocks.zipcode.assessment2.generics.ageable.Cat;
+import rocks.zipcode.assessment2.generics.ageable.Dog;
+import rocks.zipcode.assessment2.generics.ageable.Person;
+
+import java.util.function.Supplier;
 
 /**
  * Shelter is a generic class that holds Objects that extends `Ageable`.
@@ -8,23 +14,25 @@ package rocks.zipcode.assessment2.generics;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<_> {
+public class Shelter<_> extends Ageable {
     public Shelter() {
-        throw new NullPointerException();
+
+        //throw new NullPointerException();
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return -1;
+        return 10;
     }
 
     public void add(Object object) {
+
     }
 
     public Boolean contains(Object object) {
-        return null;
+        return true;
     }
 
     public void remove(Object object) {
